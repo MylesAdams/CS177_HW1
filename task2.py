@@ -28,7 +28,7 @@ def Task2A(CipherText: str) -> None:
     for i in range(0, 26):
         print('Shifted by', i)
         for char in CipherTextOne:
-            print(chr(((ord(char) + i) % 26) + 65), end='')
+            print(chr(((ord(char) - 65 + i) % 26) + 65), end='')
         print()
 
 
@@ -102,7 +102,7 @@ def Task2B(CipherText: str) -> None:
 
 # a -> a
 # b -> d
-# c -> ?q
+# c -> q
 # d -> y
 # e -> x
 # f -> v
@@ -130,9 +130,9 @@ def Task2B(CipherText: str) -> None:
 
 if __name__ == "__main__":
     print('Problem 2A')
-    #Task2A(CipherTextOne)
+    Task2A(CipherTextOne)
 
     print('\nProblem 2B')
-    Task2B(CipherTextTwo)
+    #Task2B(CipherTextTwo)
 
-    Task2B(CipherTextThree)
+    #Task2B(CipherTextThree)
